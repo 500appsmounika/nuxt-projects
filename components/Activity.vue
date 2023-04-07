@@ -1,8 +1,7 @@
 <template>
     <div class="bg-white px-4 py-5 sm:px-6">
-      <TransitionRoot as="template" :show="open">
+      <TransitionRoot as="template" :show="open" >
     <Dialog as="div" class="relative z-10" @close="open = false">
-      <div class="fixed inset-0" />
       <div class="fixed inset-0 overflow-hidden">
         <div class="absolute inset-0 overflow-hidden">
           <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
@@ -43,7 +42,7 @@
   <script setup lang="ts">
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
   const props = defineProps<{
-  name: string
+  name:{type:string, default:"abc"}
   id:number
 }>()
 
